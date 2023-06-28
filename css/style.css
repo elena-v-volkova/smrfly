@@ -18,6 +18,14 @@
 body {
     font-family: 'Montseratt', sans-serif;
     overflow-x: hidden;
+    box-sizing: border-box;
+    position: relative;
+}
+
+p {
+    color: var(--black);
+    font-size: 16px;
+    line-height: 140%;
 }
 
 section, header, footer {
@@ -46,10 +54,36 @@ h1 {
     text-transform: uppercase;
 }
 
+h2 {
+    font-size: 48px;
+    text-transform: uppercase;
+    color: var(--deepBlue);
+    font-weight: 500;
+    margin: 0;
+}
+
+h3 {
+    font-size: 32px;
+    line-height: 120%;
+    font-weight: 500;
+    margin: 0;
+}
+
 h4 {
     font-size: 16px;
     font-weight: 600;
     line-height: 140%;
+}
+
+button {
+    border: 2px solid transparent;
+    transition: all .5s ease-out;
+}
+
+button:hover {
+    cursor: pointer;
+    border: 2px solid var(--white, #FFF);
+    box-shadow: 0px 0px 10px 0px rgba(29, 174, 239, 0.70);
 }
 
 
@@ -168,4 +202,142 @@ nav li {
 
 .card p {
     max-width: 92%;
+}
+
+.flights {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 200px 0 0 0;
+}
+
+.flights__description {
+    max-width: 20%;
+}
+
+.flights__description-text {
+    max-width: 80%;
+}
+
+.flights__card {
+    position: relative;
+    max-width: 432px;
+    height: 600px;
+    border-radius: 16%;
+    display: flex;
+    flex-direction: column;
+    padding: 101px 32px 32px 32px;
+    box-sizing: border-box;
+}
+
+.flights__card_classic {
+    background: url(/assets/img/sky1.jpg);
+    background-size: cover;
+}
+
+.flights__card::before {
+    content: "";
+    position: absolute;
+    height: 60%;
+    width: 100%;
+    background: rgba(29, 174, 239, 0.70);
+    top: 15%;
+    left: 0;
+    right: 0; 
+    z-index: 1;
+}
+
+.flights__card p, h3, li, button {
+    position: relative;
+    color: white;
+    z-index: 2;
+}
+
+.flights__card h3 {
+    color: white;
+
+}
+
+.flights__card p {
+    margin-top: 8px;
+    color: white;
+}
+
+.flights__card li:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+.flights__card li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.flights__card button {
+    background-color: var(--lime);
+    position: absolute;
+    bottom: 40px;
+    width: 368px;
+    height: 60px;
+    border-radius: 16PX;
+}
+
+.flights__card_sun {
+    background: url(/assets/img/sky2.jpg);
+    background-size: cover;
+}
+
+.flights__card button {
+    color: var(--watergreen, #202A25);
+    font-size: 32px;
+}
+
+.media {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 0 0 0;
+    margin-bottom: 228px;
+}
+
+.media h2 {
+    margin-bottom: 32px;
+}
+
+.youtubeVideo {
+    border-radius: 48px;
+    margin-bottom: 60px;
+
+}
+
+.video ul {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    padding: 0;
+}
+
+.video_social {
+    position: absolute;
+    bottom: -11px;
+
+}
+
+.video p {
+    margin: 0;
+    max-width: 70%;
+    margin-bottom: 64px;
+}
+
+.cert-wrapper {
+    background-color: #1799E9;
+}
+
+.certificate {
+    padding: 32px 0 64px 0;
+}
+
+.certificate h2 {
+    font-size: 40px;
 }
